@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>روبوكس مولد روبوكس مجاني</title>
+    <meta name="description" content="احصل على روبوكس مجاني الآن! مولد روبوكس يعمل على جميع الأجهزة">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: #fff;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(to right, #8e2de2, #4a00e0);
+            padding: 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .logo {
+            max-width: 200px;
+            height: auto;
+            filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.5));
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+        }
+        
+        .title {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 28px;
+            color: #fff;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        
+        .title span {
+            display: block;
+            font-size: 16px;
+            color: #a5b1c2;
+            margin-top: 10px;
+        }
+        
+        .input-group {
+            margin-bottom: 20px;
+        }
+        
+        .input-label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #d1d8e0;
+        }
+        
+        .input-field {
+            width: 100%;
+            padding: 15px 20px;
+            border-radius: 10px;
+            border: none;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            font-size: 16px;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .input-field:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.2);
+            border-color: #8e44ad;
+        }
+        
+        .platforms {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+        
+        .platform {
+            flex: 1;
+            min-width: 80px;
+            text-align: center;
+            padding: 15px 10px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .platform i {
+            font-size: 24px;
+            margin-bottom: 8px;
+            display: block;
+        }
+        
+        .platform.active {
+            background: #8e44ad;
+            border-color: #9b59b6;
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(142, 68, 173, 0.4);
+        }
+        
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            border-radius: 10px;
+            background: linear-gradient(to right, #8e44ad, #9b59b6);
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: center;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(142, 68, 173, 0.4);
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(142, 68, 173, 0.6);
+        }
+        
+        .btn:active {
+            transform: translateY(0);
+        }
+        
+        .robux-options {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .robux-option {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .robux-option.active {
+            background: #27ae60;
+            border-color: #2ecc71;
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(39, 174, 96, 0.4);
+        }
+        
+        .robux-amount {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .robux-label {
+            font-size: 14px;
+            color: #d1d8e0;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        .loading-icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+            color: #8e44ad;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .step {
+            animation: fadeIn 0.5s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        @media (max-width: 768px) {
+            .robux-options {
+                grid-template-columns: 1fr;
+            }
+            
+            .platform {
+                min-width: 70px;
+                padding: 12px 5px;
+            }
+            
+            .platform i {
+                font-size: 20px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <img src="https://i.imgur.com/JqYeYnN.png" alt="Robux Generator" class="logo">
+    </header>
+    
+    <div class="container">
+        <!-- الخطوة 1: إدخال اسم المستخدم -->
+        <div class="card step" id="step1">
+            <h1 class="title">روبوكس مولد<span>احصل على روبوكس مجاني الآن!</span></h1>
+            
+            <div class="input-group">
+                <label class="input-label">اسم مستخدم روبلوكس:</label>
+                <input type="text" class="input-field" id="username" placeholder="أدخل اسم المستخدم الخاص بك">
+            </div>
+            
+            <div class="input-group">
+                <label class="input-label">اختر منصتك:</label>
+                <div class="platforms">
+                    <div class="platform" data-platform="windows">
+                        <i class="fab fa-windows"></i>
+                        Windows
+                    </div>
+                    <div class="platform" data-platform="android">
+                        <i class="fab fa-android"></i>
+                        Android
+                    </div>
+                    <div class="platform" data-platform="ios">
+                        <i class="fab fa-apple"></i>
+                        iOS
+                    </div>
+                    <div class="platform" data-platform="xbox">
+                        <i class="fab fa-xbox"></i>
+                        Xbox
+                    </div>
+                </div>
+            </div>
+            
+            <button class="btn" id="continueBtn">متابعة</button>
+        </div>
+        
+        <!-- الخطوة 2: اختيار كمية الروبوكس -->
+        <div class="card step hidden" id="step2">
+            <h1 class="title">اختر الكمية<span>حدد عدد الروبوكس التي تريدها</span></h1>
+            
+            <div class="robux-options">
+                <div class="robux-option" data-amount="1000">
+                    <div class="robux-amount">1,000</div>
+                    <div class="robux-label">روبوكس</div>
+                </div>
+                <div class="robux-option" data-amount="5000">
+                    <div class="robux-amount">5,000</div>
+                    <div class="robux-label">روبوكس</div>
+                </div>
+                <div class="robux-option" data-amount="10000">
+                    <div class="robux-amount">10,000</div>
+                    <div class="robux-label">روبوكس</div>
+                </div>
+                <div class="robux-option" data-amount="50000">
+                    <div class="robux-amount">50,000</div>
+                    <div class="robux-label">روبوكس</div>
+                </div>
+            </div>
+            
+            <button class="btn" id="selectBtn">تأكيد الاختيار</button>
+        </div>
+        
+        <!-- الخطوة 3: التحميل -->
+        <div class="card step hidden" id="step3">
+            <div class="loading">
+                <i class="fas fa-cog loading-icon"></i>
+                <h2 class="title">جاري التحضير<span>نقوم بتحضير الروبوكس الخاصة بك</span></h2>
+                <p>الرجاء الانتظار بينما نقوم بمعالجة طلبك...</p>
+            </div>
+        </div>
+        
+        <!-- الخطوة 4: إكمال التحقق -->
+        <div class="card step hidden" id="step4">
+            <h1 class="title">إكمال التحقق<span>لضمان أنك لست روبوت</span></h1>
+            
+            <p style="margin-bottom: 20px; text-align: center;">
+                مرحبًا <span id="displayUsername" style="color: #8e44ad; font-weight: bold;"></span>! 
+                <span id="displayAmount" style="color: #8e44ad; font-weight: bold;"></span> روبوكس جاهزة لك.
+                يرجى إكمال التحقق البشري أدناه.
+            </p>
+            
+            <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                <p style="text-align: center; margin-bottom: 15px;">انقر على الزر أدناه لبدء التحقق:</p>
+                <button class="btn" id="verifyBtn">بدء التحقق</button>
+            </div>
+            
+            <p style="font-size: 12px; text-align: center; color: rgba(255,255,255,0.6);">
+                هذا التحقق مطلوب لمنع الاستخدام الآلي للنظام.
+            </p>
+        </div>
+    </div>
+    
+    <footer>
+        <p>هذا الموقع غير مرتبط بـ Roblox Corporation. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // اختيار المنصة
+            const platforms = document.querySelectorAll('.platform');
+            platforms.forEach(platform => {
+                platform.addEventListener('click', function() {
+                    platforms.forEach(p => p.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+            
+            // اختيار كمية الروبوكس
+            const robuxOptions = document.querySelectorAll('.robux-option');
+            robuxOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    robuxOptions.forEach(o => o.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+            
+            // متابعة إلى الخطوة 2
+            document.getElementById('continueBtn').addEventListener('click', function() {
+                const username = document.getElementById('username').value;
+                const selectedPlatform = document.querySelector('.platform.active');
+                
+                if (!username || username.length < 3) {
+                    alert('الرجاء إدخال اسم مستخدم صحيح');
+                    return;
+                }
+                
+                if (!selectedPlatform) {
+                    alert('الرجاء اختيار المنصة الخاصة بك');
+                    return;
+                }
+                
+                document.getElementById('step1').classList.add('hidden');
+                document.getElementById('step2').classList.remove('hidden');
+            });
+            
+            // تأكيد الاختيار والانتقال إلى الخطوة 3
+            document.getElementById('selectBtn').addEventListener('click', function() {
+                const selectedAmount = document.querySelector('.robux-option.active');
+                
+                if (!selectedAmount) {
+                    alert('الرجاء اختيار كمية الروبوكس');
+                    return;
+                }
+                
+                document.getElementById('step2').classList.add('hidden');
+                document.getElementById('step3').classList.remove('hidden');
+                
+                // عرض اسم المستخدم والكمية في الخطوة 4
+                const username = document.getElementById('username').value;
+                const amount = selectedAmount.getAttribute('data-amount');
+                
+                document.getElementById('displayUsername').textContent = username;
+                document.getElementById('displayAmount').textContent = amount;
+                
+                // الانتقال إلى الخطوة 4 بعد 3 ثواني (محاكاة للتحميل)
+                setTimeout(() => {
+                    document.getElementById('step3').classList.add('hidden');
+                    document.getElementById('step4').classList.remove('hidden');
+                }, 3000);
+            });
+            
+            // بدء التحقق
+            document.getElementById('verifyBtn').addEventListener('click', function() {
+                alert('سيتم توجيهك إلى صفحة التحقق الآن...');
+                // هنا يمكنك إضافة الرمز لإعادة التوجيه إلى صفحة التحقق الفعلية
+            });
+        });
+    </script>
+</body>
+</html>
