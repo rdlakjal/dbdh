@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Claim Your Free Health eBooks (Complete Quick Task)</title>
+    <title>Unlock Your Free Health eBooks | Complete Quick Verification</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
@@ -30,12 +30,16 @@
         header {
             text-align: center;
             padding: 30px 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+            border-radius: 10px;
+            margin-bottom: 30px;
         }
         
         .logo {
             font-weight: 700;
             font-size: 24px;
             color: #2c3e50;
+            margin-bottom: 10px;
         }
         
         h1 {
@@ -43,12 +47,13 @@
             font-size: 2.5rem;
             margin: 20px 0;
             color: #2c3e50;
+            line-height: 1.2;
         }
         
         .subtitle {
             font-size: 1.2rem;
             color: #7f8c8d;
-            margin-bottom: 30px;
+            margin-bottom: 10px;
         }
         
         .highlight {
@@ -59,7 +64,7 @@
         .ebook-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 25px;
             justify-content: center;
             margin: 40px 0;
         }
@@ -67,24 +72,50 @@
         .ebook-card {
             background: #fff;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
             width: 280px;
             overflow: hidden;
-            transition: transform 0.3s;
+            transition: all 0.3s ease;
+            border: 1px solid #eee;
         }
         
         .ebook-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
         }
         
         .ebook-cover {
-            height: 180px;
+            height: 200px;
             background-size: cover;
             background-position: center;
+            position: relative;
         }
         
-        .ebook-1 { background-image: url('https://freeplrdownloads.com/wp-content/uploads/2023/08/Overall-Health-1536x864.jpg'); }
-        .ebook-2 { background-image: url('https://freeplrdownloads.com/wp-content/uploads/2023/08/Heart-Health-1536x864.jpg'); }
+        .ebook-cover::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+        }
+        
+        .ebook-1 { background-image: url('https://i.imgur.com/JqYeZ0x.jpg'); }
+        .ebook-2 { background-image: url('https://i.imgur.com/VvR7l7k.jpg'); }
+        
+        .ebook-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #e74c3c;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            z-index: 1;
+        }
         
         .ebook-content {
             padding: 20px;
@@ -101,6 +132,7 @@
             color: #7f8c8d;
             font-size: 0.9rem;
             margin-bottom: 15px;
+            min-height: 60px;
         }
         
         .btn-download {
@@ -108,15 +140,17 @@
             background: #e74c3c;
             color: white;
             text-align: center;
-            padding: 10px;
+            padding: 12px;
             border-radius: 5px;
             text-decoration: none;
             font-weight: 600;
-            transition: background 0.3s;
+            transition: all 0.3s;
+            font-size: 0.95rem;
         }
         
         .btn-download:hover {
             background: #c0392b;
+            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
         }
         
         .testimonials {
@@ -132,6 +166,7 @@
             margin-bottom: 20px;
             font-family: 'Montserrat', sans-serif;
             color: #2c3e50;
+            font-size: 1.5rem;
         }
         
         .testimonial-grid {
@@ -143,19 +178,40 @@
         
         .testimonial-card {
             background: #f8f9fa;
-            padding: 15px;
+            padding: 20px;
             border-radius: 8px;
             width: 250px;
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: """;
+            font-family: Georgia, serif;
+            font-size: 60px;
+            color: #e74c3c;
+            opacity: 0.2;
+            position: absolute;
+            top: 5px;
+            left: 10px;
         }
         
         .testimonial-text {
             font-style: italic;
             margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
         }
         
         .testimonial-author {
             font-weight: 600;
             color: #e74c3c;
+            display: flex;
+            align-items: center;
+        }
+        
+        .testimonial-author::before {
+            content: "—";
+            margin-right: 5px;
         }
         
         .guarantee {
@@ -163,6 +219,10 @@
             margin: 30px 0;
             font-size: 1.1rem;
             color: #7f8c8d;
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         }
         
         .guarantee span {
@@ -175,9 +235,11 @@
             padding: 20px;
             color: #7f8c8d;
             font-size: 0.9rem;
+            border-top: 1px solid #eee;
+            margin-top: 30px;
         }
         
-        /* CPA Redirect Overlay */
+        /* Premium Content Locker */
         #cpa-overlay {
             display: none;
             position: fixed;
@@ -185,73 +247,104 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.9);
+            background: rgba(0, 0, 0, 0.95);
             z-index: 1000;
             justify-content: center;
             align-items: center;
+            animation: fadeIn 0.4s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
         
         #cpa-box {
             background: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            max-width: 600px;
+            padding: 40px;
+            border-radius: 15px;
+            max-width: 650px;
+            width: 90%;
             text-align: center;
-            animation: fadeIn 0.5s;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
         
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        .lock-icon {
+            font-size: 3rem;
+            color: #e74c3c;
+            margin-bottom: 20px;
+            display: inline-block;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
         }
         
         #cpa-box h2 {
             margin-bottom: 20px;
-            color: #e74c3c;
+            color: #2c3e50;
             font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
         }
         
         #cpa-box p {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             font-size: 1.1rem;
+            color: #7f8c8d;
+            line-height: 1.6;
         }
         
         .cpa-offer {
             background: #f8f9fa;
-            padding: 20px;
-            margin: 15px 0;
-            border-radius: 8px;
-            border-left: 4px solid #e74c3c;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border-left: 5px solid #e74c3c;
             text-align: left;
+            transition: all 0.3s;
+        }
+        
+        .cpa-offer:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
         
         .cpa-offer h3 {
             color: #2c3e50;
             margin-bottom: 10px;
             font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
         }
         
         .cpa-offer p {
             margin-bottom: 15px;
             color: #7f8c8d;
+            font-size: 0.95rem;
         }
         
         .btn-cpa {
             display: inline-block;
             background: #27ae60;
             color: white;
-            padding: 12px 25px;
+            padding: 12px 30px;
             border-radius: 5px;
             text-decoration: none;
             font-weight: 600;
             margin: 10px 5px;
             transition: all 0.3s;
+            font-size: 0.95rem;
+            border: none;
+            cursor: pointer;
         }
         
         .btn-cpa:hover {
             background: #219653;
             transform: translateY(-2px);
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 15px rgba(39, 174, 96, 0.3);
         }
         
         .btn-cpa.secondary {
@@ -260,18 +353,73 @@
         
         .btn-cpa.secondary:hover {
             background: #2980b9;
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
         }
         
-        .lock-icon {
-            font-size: 2rem;
-            color: #e74c3c;
-            margin-bottom: 15px;
+        .btn-cpa.tertiary {
+            background: #e67e22;
+        }
+        
+        .btn-cpa.tertiary:hover {
+            background: #d35400;
+            box-shadow: 0 5px 15px rgba(230, 126, 34, 0.3);
+        }
+        
+        .offer-steps {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        
+        .step {
+            width: 30px;
+            height: 30px;
+            background: #e74c3c;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+        
+        .step-line {
+            height: 2px;
+            background: #ddd;
+            flex-grow: 1;
+            margin: 0 -5px;
+            align-self: center;
+        }
+        
+        .step.completed {
+            background: #27ae60;
         }
         
         .note {
             font-size: 0.9rem;
             color: #95a5a6;
             margin-top: 20px;
+            line-height: 1.5;
+        }
+        
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #eee;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .close-btn:hover {
+            background: #ddd;
         }
         
         @media (max-width: 768px) {
@@ -284,7 +432,10 @@
             }
             
             #cpa-box {
-                width: 90%;
+                padding: 25px;
+            }
+            
+            .cpa-offer {
                 padding: 20px;
             }
         }
@@ -294,115 +445,147 @@
     <div class="container">
         <header>
             <div class="logo">HealthEbooks</div>
-            <h1>Claim Your <span class="highlight">FREE</span> Health eBooks Now!</h1>
-            <p class="subtitle">Complete one quick task to unlock instant access</p>
+            <h1>Unlock Exclusive <span class="highlight">Health Secrets</span> Today</h1>
+            <p class="subtitle">Get instant access to these premium eBooks - Complete one quick verification</p>
         </header>
         
         <div class="ebook-container">
             <div class="ebook-card">
-                <div class="ebook-cover ebook-1"></div>
+                <div class="ebook-cover ebook-1">
+                    <div class="ebook-badge">NEW</div>
+                </div>
                 <div class="ebook-content">
-                    <h3 class="ebook-title">Overall Health Secrets</h3>
-                    <p class="ebook-description">Discover natural ways to boost immunity, improve digestion, and increase energy levels.</p>
+                    <h3 class="ebook-title">Overall Health Mastery</h3>
+                    <p class="ebook-description">Discover the 7 forgotten natural remedies that boost immunity, energy and longevity.</p>
                     <a href="#" class="btn-download download-btn" data-ebook="overall-health">Download Now (FREE)</a>
                 </div>
             </div>
             
             <div class="ebook-card">
-                <div class="ebook-cover ebook-2"></div>
+                <div class="ebook-cover ebook-2">
+                    <div class="ebook-badge">BESTSELLER</div>
+                </div>
                 <div class="ebook-content">
                     <h3 class="ebook-title">Heart Health Secrets</h3>
-                    <p class="ebook-description">Learn the best foods, exercises and habits to prevent heart disease and live longer.</p>
+                    <p class="ebook-description">Cardiologists reveal the 5 daily habits that prevent heart disease and stroke.</p>
                     <a href="#" class="btn-download download-btn" data-ebook="heart-health">Download Now (FREE)</a>
                 </div>
             </div>
         </div>
         
         <div class="testimonials">
-            <h2 class="testimonial-title">What Our Readers Say</h2>
+            <h2 class="testimonial-title">Real People, Life-Changing Results</h2>
             <div class="testimonial-grid">
                 <div class="testimonial-card">
-                    <p class="testimonial-text">"These tips lowered my blood pressure naturally. My doctor was amazed!"</p>
-                    <p class="testimonial-author">– Michael T., Florida</p>
+                    <p class="testimonial-text">"After following the advice in these eBooks, my cholesterol dropped 40 points in 6 weeks. My doctor couldn't believe it!"</p>
+                    <p class="testimonial-author">James L., Ohio</p>
                 </div>
                 <div class="testimonial-card">
-                    <p class="testimonial-text">"I lost 18 pounds in 2 months following the advice in these eBooks. Life-changing!"</p>
-                    <p class="testimonial-author">– Sarah K., Texas</p>
+                    <p class="testimonial-text">"I've spent thousands on health advice that didn't work. These free eBooks gave me better results than anything else."</p>
+                    <p class="testimonial-author">Susan M., Arizona</p>
                 </div>
                 <div class="testimonial-card">
-                    <p class="testimonial-text">"Finally, health advice that actually works. My energy levels have doubled!"</p>
-                    <p class="testimonial-author">– David R., California</p>
+                    <p class="testimonial-text">"At 62, I now have the energy of someone in their 30s. These health secrets should be taught in schools!"</p>
+                    <p class="testimonial-author">Robert K., Florida</p>
                 </div>
             </div>
         </div>
         
         <div class="guarantee">
-            <p>✅ <span>Instant Access</span> after completing one simple task (takes <30 seconds)</p>
+            <p>✅ <span>Instant Access Guaranteed</span> after completing one simple verification (takes under 30 seconds)</p>
         </div>
     </div>
     
     <footer>
         <p>© 2023 HealthEbooks.com | Privacy Policy | Terms of Service</p>
+        <p><small>Disclaimer: Results may vary. These statements have not been evaluated by the FDA.</small></p>
     </footer>
     
-    <!-- CPA Offer Overlay -->
+    <!-- Premium Content Locker -->
     <div id="cpa-overlay">
         <div id="cpa-box">
+            <div class="close-btn" onclick="document.getElementById('cpa-overlay').style.display='none'">×</div>
             <div class="lock-icon">🔒</div>
-            <h2>Complete One Quick Task to Unlock Your eBook</h2>
-            <p>We keep these eBooks free by partnering with sponsors. Please complete one of these simple offers to get instant access.</p>
+            <h2>Complete Quick Verification</h2>
+            <p>To prevent abuse and keep these resources free, please verify your interest by completing <strong>one simple action</strong> below.</p>
+            
+            <div class="offer-steps">
+                <div class="step">1</div>
+                <div class="step-line"></div>
+                <div class="step">2</div>
+                <div class="step-line"></div>
+                <div class="step">3</div>
+            </div>
             
             <div class="cpa-offer">
-                <h3>Option 1: Health Newsletter Signup</h3>
-                <p>Get weekly health tips and special reports (you can unsubscribe anytime)</p>
+                <h3>Option 1: Health Newsletter (Recommended)</h3>
+                <p>Get weekly health tips from top doctors (unsubscribe anytime). This helps us keep the eBooks free.</p>
                 <a href="https://smrturl.co/1ad1539" class="btn-cpa" target="_blank">Continue with Newsletter →</a>
             </div>
             
             <div class="cpa-offer">
-                <h3>Option 2: Take Our Quick Survey</h3>
-                <p>Help us improve our content by answering 3 quick questions (takes 20 seconds)</p>
+                <h3>Option 2: Quick Health Survey</h3>
+                <p>Answer 3 questions about your health habits (takes 20 seconds). Your input helps improve our content.</p>
                 <a href="https://smrturl.co/4ee5bcd" class="btn-cpa secondary" target="_blank">Take Quick Survey →</a>
             </div>
             
             <div class="cpa-offer">
-                <h3>Option 3: Special Health Trial Offer</h3>
-                <p>Try our premium health supplement guide (cancel anytime)</p>
-                <a href="https://smrturl.co/da800b3" class="btn-cpa" target="_blank">View Special Offer →</a>
+                <h3>Option 3: Special Health Trial</h3>
+                <p>Try our premium health research service (cancel anytime). Exclusive offer for eBook readers.</p>
+                <a href="https://smrturl.co/da800b3" class="btn-cpa tertiary" target="_blank">View Special Offer →</a>
             </div>
             
-            <p class="note">After completing an offer, your download will start automatically.<br>Problems? <a href="#" style="color:#3498db;">Click here</a>.</p>
+            <p class="note">After completing any option, your download will begin automatically.<br>
+            <small>Having trouble? <a href="#" style="color:#3498db;">Click here for alternate download</a></small></p>
         </div>
     </div>
     
     <script>
-        // CPA Redirect Logic
+        // Enhanced Content Locker Logic
         document.querySelectorAll('.download-btn').forEach(btn => {
             btn.addEventListener('click', function(e) {
                 e.preventDefault();
+                
+                // Show the premium locker
                 document.getElementById('cpa-overlay').style.display = 'flex';
                 
-                // Track conversion (optional)
+                // Track which eBook was requested
                 const ebookType = this.getAttribute('data-ebook');
-                console.log('Download attempted for:', ebookType);
+                console.log('Requested eBook:', ebookType);
                 
-                // Add tracking pixels here if needed
-                // fbq('track', 'InitiateCheckout');
+                // Add conversion tracking here (FB Pixel, GA, etc.)
+                // Example: fbq('track', 'InitiateCheckout', {content_name: ebookType});
             });
         });
         
-        // Close overlay if clicked outside
-        document.getElementById('cpa-overlay').addEventListener('click', function(e) {
-            if (e.target === this) {
-                this.style.display = 'none';
+        // Auto-detect offer completion (optional)
+        window.addEventListener('blur', function() {
+            if (document.getElementById('cpa-overlay').style.display === 'flex') {
+                setTimeout(function() {
+                    // Could trigger thank you message or redirect here
+                }, 1000);
             }
         });
         
-        // Auto-close after offer completion (optional)
-        window.addEventListener('blur', function() {
+        // Add a timer to create urgency (optional)
+        setTimeout(function() {
+            const timer = document.createElement('div');
+            timer.style.position = 'fixed';
+            timer.style.bottom = '20px';
+            timer.style.right = '20px';
+            timer.style.background = '#e74c3c';
+            timer.style.color = 'white';
+            timer.style.padding = '10px 15px';
+            timer.style.borderRadius = '5px';
+            timer.style.zIndex = '1000';
+            timer.style.boxShadow = '0 5px 15px rgba(0,0,0,0.2)';
+            timer.innerHTML = '⏳ Limited free downloads remaining!';
+            document.body.appendChild(timer);
+            
             setTimeout(function() {
-                document.getElementById('cpa-overlay').style.display = 'none';
-            }, 1000);
-        });
+                timer.style.display = 'none';
+            }, 10000);
+        }, 30000);
     </script>
 </body>
 </html>
