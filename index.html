@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free Health eBooks - Instant Download (Limited Time!)</title>
+    <title>Claim Your Free Health eBooks (Complete Quick Task)</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
@@ -185,7 +185,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(0, 0, 0, 0.9);
             z-index: 1000;
             justify-content: center;
             align-items: center;
@@ -197,37 +197,81 @@
             border-radius: 10px;
             max-width: 600px;
             text-align: center;
+            animation: fadeIn 0.5s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         
         #cpa-box h2 {
             margin-bottom: 20px;
             color: #e74c3c;
+            font-family: 'Montserrat', sans-serif;
         }
         
         #cpa-box p {
             margin-bottom: 20px;
+            font-size: 1.1rem;
         }
         
         .cpa-offer {
             background: #f8f9fa;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 5px;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border-left: 4px solid #e74c3c;
+            text-align: left;
+        }
+        
+        .cpa-offer h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .cpa-offer p {
+            margin-bottom: 15px;
+            color: #7f8c8d;
         }
         
         .btn-cpa {
             display: inline-block;
             background: #27ae60;
             color: white;
-            padding: 10px 20px;
+            padding: 12px 25px;
             border-radius: 5px;
             text-decoration: none;
             font-weight: 600;
             margin: 10px 5px;
+            transition: all 0.3s;
         }
         
         .btn-cpa:hover {
             background: #219653;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-cpa.secondary {
+            background: #3498db;
+        }
+        
+        .btn-cpa.secondary:hover {
+            background: #2980b9;
+        }
+        
+        .lock-icon {
+            font-size: 2rem;
+            color: #e74c3c;
+            margin-bottom: 15px;
+        }
+        
+        .note {
+            font-size: 0.9rem;
+            color: #95a5a6;
+            margin-top: 20px;
         }
         
         @media (max-width: 768px) {
@@ -238,6 +282,11 @@
             .ebook-card {
                 width: 100%;
             }
+            
+            #cpa-box {
+                width: 90%;
+                padding: 20px;
+            }
         }
     </style>
 </head>
@@ -245,8 +294,8 @@
     <div class="container">
         <header>
             <div class="logo">HealthEbooks</div>
-            <h1>Get Your <span class="highlight">FREE</span> Health eBooks Today!</h1>
-            <p class="subtitle">Discover Proven Secrets to Better Heart Health & Overall Wellness</p>
+            <h1>Claim Your <span class="highlight">FREE</span> Health eBooks Now!</h1>
+            <p class="subtitle">Complete one quick task to unlock instant access</p>
         </header>
         
         <div class="ebook-container">
@@ -254,7 +303,7 @@
                 <div class="ebook-cover ebook-1"></div>
                 <div class="ebook-content">
                     <h3 class="ebook-title">Overall Health Secrets</h3>
-                    <p class="ebook-description">Learn how to boost your immune system, improve digestion, and enhance your energy levels naturally.</p>
+                    <p class="ebook-description">Discover natural ways to boost immunity, improve digestion, and increase energy levels.</p>
                     <a href="#" class="btn-download download-btn" data-ebook="overall-health">Download Now (FREE)</a>
                 </div>
             </div>
@@ -263,32 +312,32 @@
                 <div class="ebook-cover ebook-2"></div>
                 <div class="ebook-content">
                     <h3 class="ebook-title">Heart Health Secrets</h3>
-                    <p class="ebook-description">Discover the best foods, exercises, and habits to keep your heart strong and prevent disease.</p>
+                    <p class="ebook-description">Learn the best foods, exercises and habits to prevent heart disease and live longer.</p>
                     <a href="#" class="btn-download download-btn" data-ebook="heart-health">Download Now (FREE)</a>
                 </div>
             </div>
         </div>
         
         <div class="testimonials">
-            <h2 class="testimonial-title">What Readers Are Saying</h2>
+            <h2 class="testimonial-title">What Our Readers Say</h2>
             <div class="testimonial-grid">
                 <div class="testimonial-card">
-                    <p class="testimonial-text">"This eBook changed my life! I've lost 15 pounds and my blood pressure is normal again."</p>
-                    <p class="testimonial-author">– Sarah J., Texas</p>
+                    <p class="testimonial-text">"These tips lowered my blood pressure naturally. My doctor was amazed!"</p>
+                    <p class="testimonial-author">– Michael T., Florida</p>
                 </div>
                 <div class="testimonial-card">
-                    <p class="testimonial-text">"The heart health tips were eye-opening. My doctor was impressed with my latest checkup results!"</p>
-                    <p class="testimonial-author">– Michael R., Florida</p>
+                    <p class="testimonial-text">"I lost 18 pounds in 2 months following the advice in these eBooks. Life-changing!"</p>
+                    <p class="testimonial-author">– Sarah K., Texas</p>
                 </div>
                 <div class="testimonial-card">
-                    <p class="testimonial-text">"Easy to follow advice that actually works. I feel 10 years younger after just 2 months!"</p>
-                    <p class="testimonial-author">– Linda K., California</p>
+                    <p class="testimonial-text">"Finally, health advice that actually works. My energy levels have doubled!"</p>
+                    <p class="testimonial-author">– David R., California</p>
                 </div>
             </div>
         </div>
         
         <div class="guarantee">
-            <p>✅ <span>100% FREE Download</span> – No hidden fees, no credit card required!</p>
+            <p>✅ <span>Instant Access</span> after completing one simple task (takes <30 seconds)</p>
         </div>
     </div>
     
@@ -299,22 +348,29 @@
     <!-- CPA Offer Overlay -->
     <div id="cpa-overlay">
         <div id="cpa-box">
-            <h2>Before You Download...</h2>
-            <p>Complete <strong>one quick offer</strong> to unlock your FREE eBook. It takes less than 30 seconds!</p>
+            <div class="lock-icon">🔒</div>
+            <h2>Complete One Quick Task to Unlock Your eBook</h2>
+            <p>We keep these eBooks free by partnering with sponsors. Please complete one of these simple offers to get instant access.</p>
             
             <div class="cpa-offer">
-                <h3>Special Offer for You</h3>
-                <p>Sign up for a free trial of our premium health newsletter and get instant access!</p>
-                <a href="YOUR_CPA_LINK_1" class="btn-cpa" target="_blank">Continue to Download</a>
+                <h3>Option 1: Health Newsletter Signup</h3>
+                <p>Get weekly health tips and special reports (you can unsubscribe anytime)</p>
+                <a href="https://smrturl.co/1ad1539" class="btn-cpa" target="_blank">Continue with Newsletter →</a>
             </div>
             
             <div class="cpa-offer">
-                <h3>Alternative Option</h3>
-                <p>Take this quick survey about health habits to proceed.</p>
-                <a href="YOUR_CPA_LINK_2" class="btn-cpa" target="_blank">Take Survey (30 sec)</a>
+                <h3>Option 2: Take Our Quick Survey</h3>
+                <p>Help us improve our content by answering 3 quick questions (takes 20 seconds)</p>
+                <a href="https://smrturl.co/4ee5bcd" class="btn-cpa secondary" target="_blank">Take Quick Survey →</a>
             </div>
             
-            <p><small>By completing an offer, you help us keep these eBooks free for everyone!</small></p>
+            <div class="cpa-offer">
+                <h3>Option 3: Special Health Trial Offer</h3>
+                <p>Try our premium health supplement guide (cancel anytime)</p>
+                <a href="https://smrturl.co/da800b3" class="btn-cpa" target="_blank">View Special Offer →</a>
+            </div>
+            
+            <p class="note">After completing an offer, your download will start automatically.<br>Problems? <a href="#" style="color:#3498db;">Click here</a>.</p>
         </div>
     </div>
     
@@ -328,7 +384,9 @@
                 // Track conversion (optional)
                 const ebookType = this.getAttribute('data-ebook');
                 console.log('Download attempted for:', ebookType);
-                // You can add FB Pixel or Google Analytics tracking here
+                
+                // Add tracking pixels here if needed
+                // fbq('track', 'InitiateCheckout');
             });
         });
         
@@ -337,6 +395,13 @@
             if (e.target === this) {
                 this.style.display = 'none';
             }
+        });
+        
+        // Auto-close after offer completion (optional)
+        window.addEventListener('blur', function() {
+            setTimeout(function() {
+                document.getElementById('cpa-overlay').style.display = 'none';
+            }, 1000);
         });
     </script>
 </body>
